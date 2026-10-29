@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000">
+  <defs>
+    <linearGradient id="bg1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#111b14"/>
+      <stop offset="55%" stop-color="#080d09"/>
+      <stop offset="100%" stop-color="#102018"/>
+    </linearGradient>
+    <radialGradient id="glow1" cx="50%" cy="43%" r="50%">
+      <stop offset="0%" stop-color="#35f27a" stop-opacity=".5"/>
+      <stop offset="70%" stop-color="#35f27a" stop-opacity=".07"/>
+      <stop offset="100%" stop-color="#35f27a" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="dots1" width="18" height="18" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.3" fill="#35f27a" fill-opacity=".35"/>
+    </pattern>
+    <filter id="grain1">
+      <feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 .08"/></feComponentTransfer>
+    </filter>
+  </defs>
+
+  <rect width="800" height="1000" fill="url(#bg1)"/>
+  <rect width="800" height="1000" fill="url(#glow1)"/>
+  <g stroke="#35f27a" stroke-opacity=".16">
+    <path d="M100 0v1000M200 0v1000M300 0v1000M400 0v1000M500 0v1000M600 0v1000M700 0v1000"/>
+    <path d="M0 170h800M0 340h800M0 510h800M0 680h800M0 850h800"/>
+  </g>
+
+  <circle cx="405" cy="455" r="268" fill="none" stroke="#35f27a" stroke-opacity=".35"/>
+  <circle cx="405" cy="455" r="238" fill="url(#dots1)" opacity=".55"/>
+  <path d="M135 455h540M405 185v540" stroke="#35f27a" stroke-opacity=".16" stroke-dasharray="4 10"/>
+
+  <path d="M205 955c20-163 76-252 199-252s188 89 208 252H205Z" fill="#09100b"/>
+  <path d="M205 955c20-163 76-252 199-252s188 89 208 252H205Z" fill="none" stroke="#35f27a" stroke-opacity=".65" stroke-width="2"/>
+  <ellipse cx="404" cy="481" rx="142" ry="177" fill="#0b130e"/>
+  <ellipse cx="404" cy="481" rx="142" ry="177" fill="none" stroke="#35f27a" stroke-opacity=".8" stroke-width="2"/>
+  <path d="M303 481h202" stroke="#35f27a" stroke-width="10"/>
+  <path d="M303 496h202" stroke="#35f27a" stroke-opacity=".2" stroke-width="1"/>
+  <path d="M303 466h202" stroke="#35f27a" stroke-opacity=".2" stroke-width="1"/>
+
+  <path d="M96 1000 232 710" stroke="#35f27a" stroke-width="18"/>
+  <path d="M176 1000 312 710" stroke="#071009" stroke-width="2" stroke-opacity=".8"/>
+  <path d="M672 210 720 162M696 186l-36 0M696 186l0-36" stroke="#35f27a" stroke-opacity=".7" stroke-width="2"/>
+
+  <text x="54" y="67" fill="#35f27a" font-family="Arial Narrow, Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="3.2">LA ISLA RECORDS</text>
+  <text x="54" y="91" fill="#edf4ee" fill-opacity=".55" font-family="Arial Narrow, Arial, sans-serif" font-size="11" letter-spacing="2.4">ARTISTA DEL SELLO</text>
+  <text x="746" y="67" fill="#35f27a" text-anchor="end" font-family="Arial Narrow, Arial, sans-serif" font-size="34" font-weight="800" letter-spacing="1">01</text>
+
+  <g transform="translate(54 916)" fill="#35f27a">
+    <rect width="44" height="2"/>
+    <rect y="9" width="74" height="2"/>
+    <rect y="18" width="25" height="2"/>
+  </g>
+  <text x="746" y="936" fill="#35f27a" text-anchor="end" font-family="Arial Narrow, Arial, sans-serif" font-size="10" letter-spacing="2.2">RETRATO PROVISIONAL · 01</text>
+
+  <rect width="800" height="1000" fill="none" filter="url(#grain1)" opacity=".8"/>
+</svg>

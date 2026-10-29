@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
+  <defs>
+    <filter id="grainC2">
+      <feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 .08"/></feComponentTransfer>
+    </filter>
+  </defs>
+  <rect width="800" height="800" fill="#35f27a"/>
+  <circle cx="562" cy="302" r="236" fill="#071009"/>
+  <circle cx="562" cy="302" r="192" fill="none" stroke="#35f27a" stroke-opacity=".3"/>
+  <circle cx="562" cy="302" r="157" fill="none" stroke="#35f27a" stroke-opacity=".22"/>
+  <circle cx="562" cy="302" r="118" fill="none" stroke="#35f27a" stroke-opacity=".3"/>
+  <circle cx="562" cy="302" r="70" fill="#35f27a"/>
+  <circle cx="562" cy="302" r="7" fill="#071009"/>
+  <path d="M0 604h800" stroke="#071009" stroke-width="2"/>
+  <path d="M0 612h800" stroke="#071009" stroke-width="10"/>
+  <path d="M74 196h112M74 218h72" stroke="#071009" stroke-width="8"/>
+  <path d="M74 658h650" stroke="#071009" stroke-width="1" opacity=".4"/>
+  <text x="74" y="92" fill="#071009" font-family="Arial Narrow, Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="3">LA ISLA RECORDS / IQUITOS</text>
+  <text x="74" y="310" fill="#071009" font-family="Arial Narrow, Arial, sans-serif" font-size="86" font-weight="800" letter-spacing="-5">ISLA</text>
+  <text x="74" y="372" fill="#071009" fill-opacity=".62" font-family="Arial Narrow, Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="4">SIDE A / 02</text>
+  <text x="74" y="702" fill="#071009" font-family="Arial Narrow, Arial, sans-serif" font-size="28" font-weight="800" letter-spacing="-.8">[NOMBRE DEL LANZAMIENTO]</text>
+  <text x="74" y="734" fill="#071009" fill-opacity=".6" font-family="Arial Narrow, Arial, sans-serif" font-size="11" letter-spacing="2.4">PORTADA PROVISIONAL · [NOMBRE DEL ARTISTA]</text>
+  <rect width="800" height="800" fill="none" filter="url(#grainC2)" opacity=".65"/>
+</svg>

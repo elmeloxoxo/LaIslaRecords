@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
+  <defs>
+    <filter id="grainC4">
+      <feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 .08"/></feComponentTransfer>
+    </filter>
+    <pattern id="barsC4" width="32" height="32" patternUnits="userSpaceOnUse">
+      <rect width="2" height="32" fill="#35f27a" fill-opacity=".18"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="800" fill="#080d09"/>
+  <rect width="800" height="800" fill="url(#barsC4)"/>
+  <g fill="#35f27a">
+    <rect x="74" y="168" width="650" height="34"/>
+    <rect x="74" y="220" width="440" height="6"/>
+    <rect x="74" y="246" width="560" height="6" opacity=".55"/>
+    <rect x="74" y="272" width="310" height="6" opacity=".3"/>
+    <rect x="74" y="508" width="650" height="3"/>
+    <rect x="74" y="534" width="113" height="113"/>
+  </g>
+  <g fill="#071009">
+    <rect x="102" y="562" width="57" height="6"/>
+    <rect x="102" y="580" width="57" height="6"/>
+    <rect x="102" y="598" width="38" height="6"/>
+    <rect x="102" y="616" width="48" height="6"/>
+  </g>
+  <text x="74" y="92" fill="#edf4ee" font-family="Arial Narrow, Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="3">LA ISLA RECORDS / SESIÓN DE ESTUDIO</text>
+  <text x="726" y="92" fill="#35f27a" text-anchor="end" font-family="Arial Narrow, Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="2">04</text>
+  <text x="74" y="412" fill="#edf4ee" font-family="Arial Narrow, Arial, sans-serif" font-size="67" font-weight="800" letter-spacing="-3">LIR</text>
+  <text x="74" y="472" fill="#35f27a" font-family="Arial Narrow, Arial, sans-serif" font-size="67" font-weight="800" letter-spacing="-3">04</text>
+  <text x="220" y="586" fill="#edf4ee" fill-opacity=".58" font-family="Arial Narrow, Arial, sans-serif" font-size="11" letter-spacing="2.2">PORTADA PROVISIONAL</text>
+  <text x="220" y="612" fill="#edf4ee" font-family="Arial Narrow, Arial, sans-serif" font-size="22" font-weight="700">[NOMBRE DEL LANZAMIENTO]</text>
+  <text x="220" y="636" fill="#35f27a" font-family="Arial Narrow, Arial, sans-serif" font-size="11" letter-spacing="2">[NOMBRE DEL ARTISTA]</text>
+  <text x="74" y="716" fill="#edf4ee" fill-opacity=".5" font-family="Arial Narrow, Arial, sans-serif" font-size="11" letter-spacing="2">IQUITOS · PERÚ</text>
+  <rect width="800" height="800" fill="none" filter="url(#grainC4)" opacity=".75"/>
+</svg>

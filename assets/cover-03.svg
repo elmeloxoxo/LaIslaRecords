@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
+  <defs>
+    <filter id="grainC3">
+      <feTurbulence type="fractalNoise" baseFrequency=".8" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 .08"/></feComponentTransfer>
+    </filter>
+    <clipPath id="sunC3"><circle cx="420" cy="350" r="245"/></clipPath>
+  </defs>
+  <rect width="800" height="800" fill="#f0f1e9"/>
+  <circle cx="420" cy="350" r="245" fill="#35f27a"/>
+  <g clip-path="url(#sunC3)" fill="none" stroke="#071009" stroke-linecap="round">
+    <path d="M101 260c110 38 174 104 219 198s104 142 219 168" stroke-width="16"/>
+    <path d="M129 320c95 34 151 92 190 174s91 121 191 145" stroke-width="3"/>
+    <path d="M165 386c79 29 126 79 158 149s77 104 159 124" stroke-width="24"/>
+    <path d="M215 458c56 21 90 57 114 108s57 79 115 94" stroke-width="9"/>
+  </g>
+  <circle cx="420" cy="350" r="245" fill="none" stroke="#071009" stroke-width="2"/>
+  <path d="M74 622h652" stroke="#071009" stroke-opacity=".35"/>
+  <path d="M74 622h120" stroke="#071009" stroke-width="3"/>
+  <circle cx="690" cy="622" r="4" fill="#35f27a" stroke="#071009"/>
+  <text x="74" y="86" fill="#071009" font-family="Arial Narrow, Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="3">LA ISLA RECORDS</text>
+  <text x="726" y="86" fill="#071009" fill-opacity=".55" text-anchor="end" font-family="Arial Narrow, Arial, sans-serif" font-size="11" letter-spacing="2">CATÁLOGO / 03</text>
+  <text x="74" y="696" fill="#071009" font-family="Arial Narrow, Arial, sans-serif" font-size="33" font-weight="800" letter-spacing="-1">[NOMBRE DEL LANZAMIENTO]</text>
+  <text x="74" y="730" fill="#071009" fill-opacity=".6" font-family="Arial Narrow, Arial, sans-serif" font-size="11" letter-spacing="2.2">PORTADA PROVISIONAL · [NOMBRE DEL ARTISTA]</text>
+  <rect width="800" height="800" fill="none" filter="url(#grainC3)" opacity=".7"/>
+</svg>

@@ -93,6 +93,7 @@
       <nav class="desktop-nav" aria-label="Navegación principal">
         <a href="#inicio" data-nav>Inicio</a>
         <a href="#artistas" data-nav>Artistas</a>
+        <a href="#productores" data-nav>Productores</a>
         <a href="#servicios" data-nav>Servicios</a>
         <a href="#iquitos" data-nav>Iquitos</a>
         <a href="#lanzamientos" data-nav>Lanzamientos</a>
@@ -114,11 +115,12 @@
         <nav class="mobile-menu__nav" aria-label="Navegación móvil">
           <a href="#inicio" data-mobile-link><span>01</span>Inicio</a>
           <a href="#artistas" data-mobile-link><span>02</span>Artistas</a>
-          <a href="#servicios" data-mobile-link><span>03</span>Servicios</a>
-          <a href="#iquitos" data-mobile-link><span>04</span>Iquitos</a>
-          <a href="#lanzamientos" data-mobile-link><span>05</span>Lanzamientos</a>
-          <a href="#preguntas" data-mobile-link><span>06</span>Preguntas</a>
-          <a href="#contacto" data-mobile-link><span>07</span>Contacto</a>
+          <a href="#productores" data-mobile-link><span>03</span>Productores</a>
+          <a href="#servicios" data-mobile-link><span>04</span>Servicios</a>
+          <a href="#iquitos" data-mobile-link><span>05</span>Iquitos</a>
+          <a href="#lanzamientos" data-mobile-link><span>06</span>Lanzamientos</a>
+          <a href="#preguntas" data-mobile-link><span>07</span>Preguntas</a>
+          <a href="#contacto" data-mobile-link><span>08</span>Contacto</a>
         </nav>
         <div class="mobile-menu__footer">
           <p>Sello independiente y estudio de grabación.</p>
@@ -207,8 +209,11 @@
           <div class="manifesto__body">
             <h2 class="section-title reveal" id="manifesto-title">No hacemos música en serie. Hacemos que la tuya <span class="accent-serif">se escuche como tú.</span></h2>
             <div class="manifesto__columns">
-              <p class="reveal">La Isla Records es un sello y estudio independiente en Iquitos. Trabajamos con artistas de la escena urbana —trap, reguetón, dembow— que tienen algo que decir y quieren decirlo bien: desde la primera idea hasta la última revisión del master.</p>
-              <p class="reveal">Aquí no hay una plantilla para cada canción. Hay oído, oficio y una obsesión sana por encontrar el sonido que le queda a tu historia.</p>
+              <div class="manifesto__column">
+                <p class="reveal">La Isla Records nació en el corazón de la selva para que el mundo escuche lo que suena en Loreto. Somos un estudio de música con visión de sello discográfico, creado con un propósito claro: impulsar el talento loretano.</p>
+                <p class="reveal">Creemos en los jóvenes de nuestra ciudad, de nuestros ríos, de toda la región Loreto. En esa nueva generación que hace música urbana con el alma de la isla.</p>
+              </div>
+              <p class="reveal">Nuestra misión es brindarles las herramientas, el sonido y la familia para que su talento no se quede aquí. Trabajamos con identidad. Somos loretanos y llevamos nuestra cultura en cada beat, en cada letra, en cada historia lleno de flow. Nuestra visión es simple: que los sueños de nuestros artistas crucen el río y lleguen a oídos de todo el mundo.</p>
             </div>
             <div class="manifesto__values">
               <article class="value-card reveal">
@@ -356,11 +361,64 @@
       </div>
     </section>
 
+    <section class="section producers" id="productores" aria-labelledby="producers-title">
+      <div class="container">
+        <div class="section-heading section-heading--light">
+          <div class="reveal">
+            <p class="eyebrow eyebrow--light"><span class="eyebrow__index">04</span> Productores</p>
+            <h2 class="section-title" id="producers-title">El equipo detrás <span class="accent-serif">de cada sonido.</span></h2>
+          </div>
+          <div class="section-heading__aside reveal">
+            <p>Conoce a quienes producen y dan forma al sonido de La Isla Records.</p>
+            <a class="text-link" href="#contacto" data-service="Producción musical">Trabajar una producción <svg class="icon" aria-hidden="true"><use href="#icon-arrow-up-right"></use></svg></a>
+          </div>
+        </div>
+
+        <div class="artist-grid producer-grid">
+          <article class="artist-card producer-card reveal">
+            <figure class="artist-card__media producer-card__media">
+              <img
+                src="assets/Estudio1.jpg"
+                alt="Retrato de Melousooo, productor musical de La Isla Records"
+                width="800"
+                height="1000"
+                loading="lazy">
+              <figcaption>Melousooo · Productor</figcaption>
+            </figure>
+            <div class="artist-card__body">
+              <p class="artist-card__label">Productor del sello</p>
+              <h3>Melousooo</h3>
+              <p class="artist-card__meta">“The Maker Money” · Producción musical</p>
+              <p class="artist-card__bio">Productor musical del equipo de La Isla Records.</p>
+            </div>
+          </article>
+
+          <article class="artist-card producer-card reveal">
+            <figure class="artist-card__media producer-card__media">
+              <img
+                  src="assets/ImagenEstudio.jpg"
+                  alt="Retrato de DJ Anxious Boy, productor de La Isla Records"
+                  width="800"
+                  height="1000"
+                  loading="lazy">
+              <figcaption>DJ Anxious Boy · Productor</figcaption>
+            </figure>
+            <div class="artist-card__body">
+              <p class="artist-card__label">DJ y productor</p>
+              <h3>DJ Anxious Boy</h3>
+              <p class="artist-card__meta">Producción musical · La Isla Records</p>
+              <p class="artist-card__bio">DJ y productor del equipo de La Isla Records.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section class="section services" id="servicios" aria-labelledby="services-title">
       <div class="container">
         <div class="section-heading section-heading--light">
           <div class="reveal">
-            <p class="eyebrow eyebrow--light"><span class="eyebrow__index">04</span> Servicios de estudio</p>
+            <p class="eyebrow eyebrow--light"><span class="eyebrow__index">05</span> Servicios de estudio</p>
             <h2 class="section-title" id="services-title">Del primer demo <span class="accent-serif">al master final.</span></h2>
           </div>
           <div class="section-heading__aside reveal">
@@ -517,7 +575,7 @@
       <div class="container">
         <div class="branch__heading">
           <div class="reveal">
-            <p class="eyebrow eyebrow--dark"><span class="eyebrow__index">05</span> Sucursal Iquitos</p>
+            <p class="eyebrow eyebrow--dark"><span class="eyebrow__index">06</span> Sucursal Iquitos</p>
             <h2 class="section-title" id="branch-title">La Isla tiene coordenadas: <span class="accent-serif">Iquitos.</span></h2>
           </div>
           <div class="branch__intro reveal">
@@ -530,8 +588,8 @@
           <article class="branch-card branch-card--location reveal">
             <p class="branch-card__label">Dirección</p>
             <address class="branch-address">
-              <strong><span class="campo">[dirección exacta de la sucursal]</span></strong>
-              <span><span class="campo">[distrito / referencia]</span></span>
+              <strong><span class="campo">Jr. Prolongacion Calvo de Araujo Cdra. 27</span></strong>
+              <span><span class="campo">Iquitos,Maynas 16002</span></span>
               <span>Iquitos, Loreto — Perú</span>
             </address>
             <div class="branch-card__divider"></div>
@@ -539,7 +597,7 @@
             <ul class="branch-contact">
               <li><svg class="icon" aria-hidden="true"><use href="#icon-phone"></use></svg><span><a class="wa-link" href="tel:+51925793355" aria-label="Llamar a La Isla Records">+51 925 793 355</a></span></li>
               <li><svg class="icon" aria-hidden="true"><use href="#icon-chat"></use></svg><span><a class="wa-link" href="https://wa.me/51925793355" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp a La Isla Records">WhatsApp · +51 925 793 355</a></span></li>
-              <li><svg class="icon" aria-hidden="true"><use href="#icon-mail"></use></svg><span><span class="campo">[correo electrónico]</span></span></li>
+              <li><svg class="icon" aria-hidden="true"><use href="#icon-mail"></use></svg><span><span class="campo"><a href="mailto:laislarecordsisla@gmail.com" aria-label="Enviar correo electrónico a La Isla Records">info@laisla.com</a></span></span></li>
             </ul>
             <p class="branch-card__small">Para visitar el estudio, coordina tu cita previamente. Así podemos dedicarte el tiempo que tu proyecto merece.</p>
             <div class="branch-card__location-footer">
@@ -679,7 +737,7 @@
       <div class="container">
         <div class="section-heading section-heading--dark">
           <div class="reveal">
-            <p class="eyebrow eyebrow--dark"><span class="eyebrow__index">06</span> Lanzamientos</p>
+            <p class="eyebrow eyebrow--dark"><span class="eyebrow__index">07</span> Lanzamientos</p>
             <h2 class="section-title" id="releases-title">Lo que sale <span class="accent-serif">de la isla.</span></h2>
           </div>
           <div class="section-heading__aside reveal">
@@ -755,7 +813,7 @@
       <div class="container">
         <div class="faq__layout">
           <div class="faq__intro">
-            <p class="eyebrow eyebrow--light reveal"><span class="eyebrow__index">07</span> Preguntas frecuentes</p>
+            <p class="eyebrow eyebrow--light reveal"><span class="eyebrow__index">08</span> Preguntas frecuentes</p>
             <h2 class="section-title reveal" id="faq-title">Antes de <span class="accent-serif">dar el paso.</span></h2>
             <p class="faq__lead reveal">Lo que suelen preguntarnos artistas, productores y personas que están por entrar al estudio por primera vez.</p>
             <div class="faq__aside reveal">
@@ -883,7 +941,7 @@
       <div class="container">
         <div class="contact__layout">
           <div class="contact__intro">
-            <p class="eyebrow eyebrow--light reveal"><span class="eyebrow__index">08</span> Contacto</p>
+            <p class="eyebrow eyebrow--light reveal"><span class="eyebrow__index">09</span> Contacto</p>
             <h2 class="section-title reveal" id="contact-title">Tu próxima canción empieza con <span class="accent-serif">una conversación.</span></h2>
             <p class="contact__lead reveal">Cuéntanos qué tienes entre manos: una idea, una maqueta, un lanzamiento por terminar. Te responderemos con los siguientes pasos y una propuesta clara.</p>
 
@@ -891,22 +949,22 @@
               <div class="contact-detail">
                 <span class="contact-detail__icon"><svg class="icon" aria-hidden="true"><use href="#icon-pin"></use></svg></span>
                 <div>
-                  <p class="contact-detail__label">Sucursal Iquitos</p>
-                  <address><span class="campo">[dirección exacta]</span><br><span class="campo">[distrito / referencia]</span><br>Iquitos, Loreto — Perú</address>
+                  <p class="contact-detail__label">Estudio Iquitos</p>
+                  <address><span class="campo">Jr. Prolongacion Calvo de Araujo Cdra. 27</span><br><span class="campo">Iquitos,Maynas</span><br>Iquitos, Loreto — Perú</address>
                 </div>
               </div>
               <div class="contact-detail">
                 <span class="contact-detail__icon"><svg class="icon" aria-hidden="true"><use href="#icon-clock"></use></svg></span>
                 <div>
                   <p class="contact-detail__label">Horarios</p>
-                  <p>Lun–Vie: <span class="campo">[horario]</span><br>Sábado: <span class="campo">[horario]</span><br>Domingo: <span class="campo">[cerrado / cita previa]</span></p>
+                  <p>Lun–Vie: <span class="campo">9:00am - 8:00pm</span><br>Sábado: <span class="campo">9:00am - 6:00pm</span><br>Domingo: <span class="campo">Cerrado</span></p>
                 </div>
               </div>
               <div class="contact-detail">
                 <span class="contact-detail__icon"><svg class="icon" aria-hidden="true"><use href="#icon-mail"></use></svg></span>
                 <div>
                   <p class="contact-detail__label">Escríbenos</p>
-                  <p><a class="wa-link" href="https://wa.me/51925793355" target="_blank" rel="noopener">WhatsApp · +51 925 793 355</a><br><span class="campo">[correo electrónico]</span></p>
+                  <p><a class="wa-link" href="https://wa.me/51925793355" target="_blank" rel="noopener">WhatsApp · +51 925 793 355</a><br><span class="campo"><a href="mailto:laislarecordsisla@gmail.com" aria-label="Enviar correo electrónico a La Isla Records">info@laisla.com</a></span></p>
                   <p class="contact-direct">La Isla Records directamente</p>
                 </div>
               </div>
@@ -915,8 +973,18 @@
             <div class="contact__socials reveal">
               <p>Síguenos</p>
               <div>
-                <span class="social-placeholder"><svg class="icon" aria-hidden="true"><use href="#icon-instagram"></use></svg> [Instagram]</span>
-                <span class="social-placeholder"><svg class="icon" aria-hidden="true"><use href="#icon-youtube"></use></svg> [YouTube]</span>
+                <a class="social-placeholder"
+                  href="https://www.instagram.com/laislarecordspe/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram de La Isla Records">
+                  <svg class="icon" aria-hidden="true">
+                    <use href="#icon-instagram"></use>
+                  </svg>
+                  Instagram
+                </a>
+
+                <span class="social-placeholder"><svg class="icon" aria-hidden="true"><use href="#icon-youtube"></use></svg> YouTube</span>
               </div>
             </div>
           </div>

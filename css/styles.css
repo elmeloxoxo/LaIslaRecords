@@ -840,10 +840,14 @@ address {
   isolation: isolate;
   overflow: hidden;
   padding-top: clamp(44px, 6vw, 76px);
-  background:
-    radial-gradient(ellipse at 76% 43%, rgba(53, 242, 122, 0.1), transparent 34%),
-    radial-gradient(ellipse at 10% 10%, rgba(53, 242, 122, 0.035), transparent 28%),
-    var(--negro);
+   background:
+    linear-gradient(
+      90deg,
+      rgba(7, 11, 8, 0.88) 0%,
+      rgba(7, 11, 8, 0.60) 50%,
+      rgba(7, 11, 8, 0.42) 100%
+    ),
+    url("../assets/boulevard_iquitos2.jpg") center 55% / cover no-repeat;
 }
 
 .hero__grid {
@@ -1288,10 +1292,17 @@ address {
 .manifesto__columns {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: clamp(24px, 4vw, 58px);
+  column-gap: clamp(24px, 4vw, 58px);
+  row-gap: clamp(18px, 2.5vw, 32px);
   max-width: 920px;
   margin-top: 42px;
   margin-left: auto;
+}
+
+.manifesto__column {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(18px, 2.5vw, 32px);
 }
 
 .manifesto__columns p {
@@ -1386,6 +1397,39 @@ address {
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 18px;
   align-items: stretch;
+}
+
+.producers {
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 100% 0%, rgba(53, 242, 122, 0.045), transparent 34%),
+    var(--carbon);
+}
+
+.producer-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  max-width: 840px;
+}
+
+.producer-card__photo-placeholder {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  background:
+    radial-gradient(circle at 50% 42%, rgba(53, 242, 122, 0.14), transparent 31%),
+    linear-gradient(145deg, var(--carbon-2), var(--negro));
+  color: var(--verde);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.producer-card__photo-placeholder span {
+  padding: 10px 14px;
+  border: 1px dashed var(--verde-linea);
 }
 
 .artist-card {

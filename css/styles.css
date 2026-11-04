@@ -2656,7 +2656,7 @@ address {
 .release-feature__copy {
   max-width: 540px;
   margin-top: 24px;
-  color: var(--gris);
+  color: var(--blanco);
   font-size: 0.9rem;
   line-height: 1.7;
 }
@@ -2917,6 +2917,28 @@ address {
 .release-card__note::before {
   content: "↗";
   margin-right: 4px;
+}
+
+.release-card__footer {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 14px;
+  margin-top: 10px;
+}
+
+.release-card__catalog {
+  flex: none;
+  color: var(--gris-oscuro);
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.release-card__footer .release-card__note {
+  margin-top: 0;
 }
 
 .release-callout {

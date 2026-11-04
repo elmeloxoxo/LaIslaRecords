@@ -2694,15 +2694,135 @@ address {
   text-transform: uppercase;
 }
 
-.release-grid {
+/* Carrusel de lanzamientos */
+.releases-carousel {
+  --carousel-gap: clamp(18px, 2.3vw, 30px);
+  --per-view: 3;
+}
+
+.releases-carousel__bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 20px;
+}
+
+.releases-carousel__hint {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: var(--gris-oscuro);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.releases-carousel__count {
+  color: var(--negro);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.08em;
+}
+
+.releases-carousel__controls {
+  display: flex;
+  gap: 8px;
+}
+
+.carousel-arrow {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: clamp(18px, 2.3vw, 30px);
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid var(--linea-oscura);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--negro);
+  cursor: pointer;
+  transition: background var(--transicion), border-color var(--transicion), color var(--transicion), opacity var(--transicion);
+}
+
+.carousel-arrow:hover:not(:disabled) {
+  border-color: var(--negro);
+  background: var(--negro);
+  color: var(--verde);
+}
+
+.carousel-arrow:disabled {
+  opacity: 0.28;
+  cursor: default;
+}
+
+.carousel-arrow:focus-visible {
+  outline: 2px solid var(--verde-oscuro);
+  outline-offset: 3px;
+}
+
+.carousel-arrow .icon {
+  width: 17px;
+  height: 17px;
+}
+
+.carousel-arrow--prev .icon {
+  transform: rotate(180deg);
+}
+
+.release-grid {
+  display: flex;
+  gap: var(--carousel-gap);
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  overscroll-behavior-x: contain;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  /* Espacio para el desplazamiento vertical de la animación de aparición */
+  padding-bottom: 30px;
+  margin-bottom: -30px;
+}
+
+.release-grid::-webkit-scrollbar {
+  display: none;
+}
+
+.release-grid:focus-visible {
+  outline: 2px solid var(--verde-oscuro);
+  outline-offset: 4px;
+  border-radius: var(--radio-s);
 }
 
 .release-card {
+  flex: 0 0 calc((100% - (var(--per-view) - 1) * var(--carousel-gap)) / var(--per-view));
   min-width: 0;
   padding-bottom: 4px;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+.releases-carousel__progress {
+  position: relative;
+  height: 2px;
+  margin-top: 20px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: var(--linea-oscura);
+}
+
+.releases-carousel__progress span {
+  display: block;
+  height: 100%;
+  width: 100%;
+  border-radius: inherit;
+  background: var(--verde-oscuro);
+  transform-origin: left center;
+  transition: transform 180ms var(--ease-suave);
+}
+
+.releases-carousel.is-static .releases-carousel__controls,
+.releases-carousel.is-static .releases-carousel__progress {
+  display: none;
 }
 
 .release-card__art {
@@ -3649,6 +3769,10 @@ address {
     max-width: 100%;
   }
 
+  .releases-carousel {
+    --per-view: 2.15;
+  }
+
   .release-feature {
     grid-template-columns: 1fr;
   }
@@ -4109,9 +4233,13 @@ address {
     text-align: left;
   }
 
-  .release-grid {
-    grid-template-columns: 1fr;
-    gap: 34px;
+  .releases-carousel {
+    --per-view: 1.12;
+    --carousel-gap: 16px;
+  }
+
+  .releases-carousel__hint-text {
+    display: none;
   }
 
   .release-card__art {

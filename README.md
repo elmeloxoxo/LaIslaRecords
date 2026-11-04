@@ -59,7 +59,7 @@ No hay que ejecutar `npm install` ni ningún paso de build.
 - **Productores**: perfiles visuales de Melousooo (The Maker Money) y DJ Anxious Boy, con espacios preparados para añadir sus fotos.
 - **Servicios de producción**: producción musical, mezcla, mastering, vocal coach, grabación en estudio, composición y arreglos. Cada servicio tiene descripción, beneficio principal y CTA que preselecciona el servicio en el formulario. Incluye proceso de trabajo y nota de cotización.
 - **Sucursal Iquitos**: dirección, contacto, horarios, croquis referencial, indicaciones de llegada y CTA para coordinar una visita.
-- **Lanzamientos**: lanzamiento destacado y tres fichas con portadas provisionales.
+- **Lanzamientos**: lanzamiento destacado y cuatro fichas en un carrusel horizontal (flechas, contador y barra de progreso).
 - **Preguntas frecuentes**: 10 preguntas en acordeón nativo (`<details>` / `<summary>`).
 - **Contacto**: canales de contacto, resumen de sede y horarios, y formulario sin envío real.
 - **Pie de página**: navegación secundaria, datos de sucursal y contacto.

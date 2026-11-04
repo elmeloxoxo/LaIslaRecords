@@ -215,6 +215,106 @@
   });
 
   /* ------------------------------------------------------------------------
+     Carrusel de lanzamientos
+     ------------------------------------------------------------------------ */
+  document.querySelectorAll('[data-carousel]').forEach((carousel) => {
+    const track = carousel.querySelector('[data-carousel-track]');
+    if (!track) return;
+
+    const cards = [...track.children];
+    if (cards.length < 2) return;
+
+    const prevButton = carousel.querySelector('[data-carousel-prev]');
+    const nextButton = carousel.querySelector('[data-carousel-next]');
+    const progressBar = carousel.querySelector('[data-carousel-progress]');
+    const currentTarget = carousel.querySelector('[data-carousel-current]');
+    const totalTarget = carousel.querySelector('[data-carousel-total]');
+
+    if (totalTarget) {
+      totalTarget.textContent = String(cards.length).padStart(2, '0');
+    }
+
+    const readGap = () => {
+      const styles = window.getComputedStyle(track);
+      const gap = Number.parseFloat(styles.columnGap || styles.gap);
+      return Number.isFinite(gap) ? gap : 0;
+    };
+
+    const step = () => cards[0].getBoundingClientRect().width + readGap();
+    const maxScroll = () => Math.max(0, track.scrollWidth - track.clientWidth);
+
+    const visibleCards = () => {
+      const cardStep = step();
+      if (!cardStep) return 1;
+      const visible = Math.round((track.clientWidth + readGap()) / cardStep);
+      return Math.min(cards.length, Math.max(1, visible));
+    };
+
+    const update = () => {
+      const max = maxScroll();
+      const position = Math.min(Math.max(track.scrollLeft, 0), max);
+      const hasOverflow = max > 2;
+
+      carousel.classList.toggle('is-static', !hasOverflow);
+
+      if (prevButton) prevButton.disabled = position <= 2;
+      if (nextButton) nextButton.disabled = position >= max - 2;
+
+      if (currentTarget) {
+        const index = Math.min(cards.length, Math.round(position / step()) + 1);
+        currentTarget.textContent = String(index).padStart(2, '0');
+      }
+
+      if (progressBar) {
+        const ratio = visibleCards() / cards.length;
+        const travel = hasOverflow ? position / max : 0;
+        progressBar.style.transform = `scaleX(${ratio}) translateX(${(travel * (1 / ratio - 1)) * 100}%)`;
+      }
+    };
+
+    let ticking = false;
+    const scheduleUpdate = () => {
+      if (ticking) return;
+      ticking = true;
+      window.requestAnimationFrame(() => {
+        update();
+        ticking = false;
+      });
+    };
+
+    const move = (direction) => {
+      track.scrollBy({
+        left: direction * step(),
+        behavior: reduceMotion ? 'auto' : 'smooth'
+      });
+    };
+
+    prevButton?.addEventListener('click', () => move(-1));
+    nextButton?.addEventListener('click', () => move(1));
+
+    track.addEventListener('keydown', (event) => {
+      if (event.key === 'ArrowRight') {
+        event.preventDefault();
+        move(1);
+      } else if (event.key === 'ArrowLeft') {
+        event.preventDefault();
+        move(-1);
+      } else if (event.key === 'Home') {
+        event.preventDefault();
+        track.scrollTo({ left: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
+      } else if (event.key === 'End') {
+        event.preventDefault();
+        track.scrollTo({ left: maxScroll(), behavior: reduceMotion ? 'auto' : 'smooth' });
+      }
+    });
+
+    track.addEventListener('scroll', scheduleUpdate, { passive: true });
+    window.addEventListener('resize', scheduleUpdate);
+
+    update();
+  });
+
+  /* ------------------------------------------------------------------------
      Formulario de contacto (demostración, sin envío)
      ------------------------------------------------------------------------ */
   contactForm?.addEventListener('submit', (event) => {

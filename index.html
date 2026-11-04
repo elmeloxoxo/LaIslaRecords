@@ -711,50 +711,69 @@
           </div>
         </article>
 
-        <div class="release-grid">
-          <article class="release-card reveal">
-            <a class="release-card__art" href="#contacto" aria-label="Consultar por [nombre del lanzamiento]">
-              <img src="assets/davinci_alta_calidad.png" alt="Portada provisional de [nombre del lanzamiento]" width="800" height="800" loading="lazy">
-              <span class="release-card__play" aria-hidden="true"><svg class="icon"><use href="#icon-play"></use></svg></span>
-            </a>
-            <div class="release-card__meta"><span>SPOTIFY - Youtube - apple music - dezzer </span><span>2/01/26</span></div>
-            <h3>DA VINCI</h3>
-            <p>Campbell</p>
-            <span class="release-card__note">[enlace de escucha]</span>
-          </article>
+        <div class="releases-carousel" data-carousel>
+          <div class="releases-carousel__bar reveal">
+            <p class="releases-carousel__hint">
+              <span class="releases-carousel__count"><span data-carousel-current>01</span> / <span data-carousel-total>04</span></span>
+              <span class="releases-carousel__hint-text">Desliza para ver todo el catálogo</span>
+            </p>
+            <div class="releases-carousel__controls">
+              <button class="carousel-arrow carousel-arrow--prev" type="button" data-carousel-prev aria-controls="release-track" aria-label="Ver lanzamientos anteriores" disabled>
+                <svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg>
+              </button>
+              <button class="carousel-arrow" type="button" data-carousel-next aria-controls="release-track" aria-label="Ver lanzamientos siguientes">
+                <svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg>
+              </button>
+            </div>
+          </div>
 
-          <article class="release-card reveal">
-            <a class="release-card__art" href="#contacto" aria-label="Consultar por [nombre del lanzamiento]">
-              <img src="assets/sidebitch.png" alt="Portada provisional de [nombre del lanzamiento]" width="800" height="800" loading="lazy">
-              <span class="release-card__play" aria-hidden="true"><svg class="icon"><use href="#icon-play"></use></svg></span>
-            </a>
-            <div class="release-card__meta"><span>SPOTIFY - Youtube - apple music - dezzer </span><span>20/09/25</span></div>
-            <h3>SIDE BITCH</h3>
-            <p>Melow ft. Joar</p>
-            <span class="release-card__note">[enlace de escucha]</span>
-          </article>
+          <div class="release-grid" id="release-track" data-carousel-track tabindex="0" role="group" aria-roledescription="carrusel" aria-label="Lanzamientos del sello">
+            <article class="release-card reveal">
+              <a class="release-card__art" href="#contacto" aria-label="Consultar por [nombre del lanzamiento]">
+                <img src="assets/davinci_alta_calidad.png" alt="Portada provisional de [nombre del lanzamiento]" width="800" height="800" loading="lazy">
+                <span class="release-card__play" aria-hidden="true"><svg class="icon"><use href="#icon-play"></use></svg></span>
+              </a>
+              <div class="release-card__meta"><span>SPOTIFY - Youtube - apple music - dezzer </span><span>2/01/26</span></div>
+              <h3>DA VINCI</h3>
+              <p>Campbell</p>
+              <span class="release-card__note">[enlace de escucha]</span>
+            </article>
 
-          <article class="release-card reveal">
-            <a class="release-card__art" href="#contacto" aria-label="Consultar por [nombre del lanzamiento]">
-              <img src="assets/Suniverso.jpeg" alt="Portada provisional de [nombre del lanzamiento]" width="800" height="800" loading="lazy">
-              <span class="release-card__play" aria-hidden="true"><svg class="icon"><use href="#icon-play"></use></svg></span>
-            </a>
-            <div class="release-card__meta"><span>SPOTIFY - Youtube - apple music - dezzer </span><span>30/08/24</span></div>
-            <h3>SU UNIVERSO</h3>
-            <p>Joar</p>
-            <span class="release-card__note">[enlace de escucha]</span>
-          </article>
+            <article class="release-card reveal">
+              <a class="release-card__art" href="#contacto" aria-label="Consultar por [nombre del lanzamiento]">
+                <img src="assets/sidebitch.png" alt="Portada provisional de [nombre del lanzamiento]" width="800" height="800" loading="lazy">
+                <span class="release-card__play" aria-hidden="true"><svg class="icon"><use href="#icon-play"></use></svg></span>
+              </a>
+              <div class="release-card__meta"><span>SPOTIFY - Youtube - apple music - dezzer </span><span>20/09/25</span></div>
+              <h3>SIDE BITCH</h3>
+              <p>Melow ft. Joar</p>
+              <span class="release-card__note">[enlace de escucha]</span>
+            </article>
 
-          <article class="release-card reveal">
-            <a class="release-card__art" href="#contacto" aria-label="Consultar por [nombre del lanzamiento]">
-              <img src="assets/Bipolaridad.jpeg" alt="Portada provisional de [nombre del lanzamiento], con barras verdes sobre fondo negro" width="800" height="800" loading="lazy">
-              <span class="release-card__play" aria-hidden="true"><svg class="icon"><use href="#icon-play"></use></svg></span>
-            </a>
-            <div class="release-card__meta"><span>SPOTIFY - YOUTUBE - APPLE MUSIC - DEZZER </span><span>16/08/25</span></div>
-            <h3>BIPOLAR</h3>
-            <p>AugustRap ft. Rejo</p>
-            <span class="release-card__note">[enlace de escucha]</span>
-          </article>
+            <article class="release-card reveal">
+              <a class="release-card__art" href="#contacto" aria-label="Consultar por [nombre del lanzamiento]">
+                <img src="assets/Suniverso.jpeg" alt="Portada provisional de [nombre del lanzamiento]" width="800" height="800" loading="lazy">
+                <span class="release-card__play" aria-hidden="true"><svg class="icon"><use href="#icon-play"></use></svg></span>
+              </a>
+              <div class="release-card__meta"><span>SPOTIFY - Youtube - apple music - dezzer </span><span>30/08/24</span></div>
+              <h3>SU UNIVERSO</h3>
+              <p>Joar</p>
+              <span class="release-card__note">[enlace de escucha]</span>
+            </article>
+
+            <article class="release-card reveal">
+              <a class="release-card__art" href="#contacto" aria-label="Consultar por [nombre del lanzamiento]">
+                <img src="assets/Bipolaridad.jpeg" alt="Portada provisional de [nombre del lanzamiento], con barras verdes sobre fondo negro" width="800" height="800" loading="lazy">
+                <span class="release-card__play" aria-hidden="true"><svg class="icon"><use href="#icon-play"></use></svg></span>
+              </a>
+              <div class="release-card__meta"><span>SPOTIFY - YOUTUBE - APPLE MUSIC - DEZZER </span><span>16/08/25</span></div>
+              <h3>BIPOLAR</h3>
+              <p>AugustRap ft. Rejo</p>
+              <span class="release-card__note">[enlace de escucha]</span>
+            </article>
+          </div>
+
+          <div class="releases-carousel__progress" aria-hidden="true"><span data-carousel-progress></span></div>
         </div>
 
         <div class="release-callout reveal">
